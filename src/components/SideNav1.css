@@ -1,0 +1,41 @@
+.side-nav{
+    position: fixed;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 60px;
+    background: #333;
+    color: white;
+
+    padding-left: 3px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    border-radius:50px;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 3px;
+    background-color: black;
+}
+.side-nav .visible{
+    left: 40px;
+}
+.side-nav .nav-icon{
+    font: size 24px;
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.side-nav .nav-icon:hover::after{
+    cursor: pointer;
+    content: attr(title);
+    position: absolute;
+    left: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
