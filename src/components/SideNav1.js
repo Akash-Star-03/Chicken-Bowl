@@ -1,32 +1,41 @@
-import React, { useState,useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import './SideNav1.css';
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { FaDrumstickBite, FaHome } from "react-icons/fa";
 import { FaBowlRice } from 'react-icons/fa6';
+import './SideNav1.css';
 
+const SideNav1 = () => {
+  const [visible, setVisible] = useState(true);
 
-const SideNav1 = (visible) => {
-  // const [showNav,setShowNav]=useState(false);
-  // useEffect(()=>{
-  //   const handleScroll=()=>{
-  //     const scrollY=window.scrollY;
-  //     setShowNav(scrollY > 400);
-  //   };
-  //   window.addEventListener('scroll',handleScroll);
-  // },[])
+  const handleMouseEnter = () => {
+    setVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setVisible(false);
+  };
+
   return (
-    <div>
-    
-    <div className={`side-nav ${visible}? 'visible' : ""`}> 
-    <Nav defaultActiveKey="#section1" className="flex-column">
-      <Nav.Link href="#Home"> <FaHome className='nav-icon' title='Home'/> </Nav.Link>
-      <Nav.Link href="#menu"><FaDrumstickBite  className='nav-icon' title='Starters'/></Nav.Link>
-      <Nav.Link href="#Foods-Main"> <FaBowlRice  className='nav-icon' title='Main course'/></Nav.Link>
-    </Nav>
+    <div
+      className={`side-nav-container ${visible ? 'visible' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="side-nav">
+        <Nav defaultActiveKey="#section1" className="flex-column">
+          <Nav.Link href="#Home">
+            <FaHome className='nav-icon' title='Home' />
+          </Nav.Link>
+          <Nav.Link href="#menu">
+            <FaDrumstickBite className='nav-icon' title='Starters' />
+          </Nav.Link>
+          <Nav.Link href="#Foods-Main">
+            <FaBowlRice className='nav-icon' title='Main course' />
+          </Nav.Link>
+        </Nav>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default SideNav1
+export default SideNav1;

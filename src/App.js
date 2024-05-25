@@ -46,7 +46,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <SideNav1 visible={navVisible}/>
+      <SideNav1/>
      <Appbar/>
      <br/>
      <br/>
