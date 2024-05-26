@@ -4,25 +4,45 @@ import './SideNav1.css';
 import Nav from 'react-bootstrap/Nav';
 import { FaDrumstickBite, FaHome } from "react-icons/fa";
 import { FaBowlRice } from 'react-icons/fa6';
+import {LuDessert} from 'react-icons/lu';
 
-
-const SideNav1 = (visible) => {
+const SideNav1 =() => {
   // const [showNav,setShowNav]=useState(false);
   // useEffect(()=>{
   //   const handleScroll=()=>{
-  //     const scrollY=window.scrollY;
-  //     setShowNav(scrollY > 400);
+  //     if(window.scrollY > 300){
+  //       setShowNav(true);
+  //     }else{
+  //     setShowNav(false);
   //   };
+  // }
   //   window.addEventListener('scroll',handleScroll);
-  // },[])
+  //   return ()=>{
+  //     window.removeEventListener('scroll',handleScroll);
+  //   }
+  // },[]);
+  const [visible, setVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setVisible(false);
+  };
+
   return (
-    <div>
     
-    <div className={`side-nav ${visible}? 'visible' : ""`}> 
+   
+    <div className="side-nav-container"
+      onScroll={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}> 
+       <div className="side-nav">
     <Nav defaultActiveKey="#section1" className="flex-column">
-      <Nav.Link href="#Home"> <FaHome className='nav-icon' title='Home'/> </Nav.Link>
-      <Nav.Link href="#menu"><FaDrumstickBite  className='nav-icon' title='Starters'/></Nav.Link>
-      <Nav.Link href="#Foods-Main"> <FaBowlRice  className='nav-icon' title='Main course'/></Nav.Link>
+      
+      <Nav.Link href="#menu"><FaDrumstickBite  className='nav-icon text-black' title='Starters'/></Nav.Link>
+      <Nav.Link href="#Foods-Main"> <FaBowlRice  className='nav-icon text-black' title='Main course'/></Nav.Link>
+      <Nav.Link href="#desert"> <LuDessert className='nav-icon text-black'/> </Nav.Link>
     </Nav>
     </div>
     </div>

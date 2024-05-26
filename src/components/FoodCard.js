@@ -6,6 +6,10 @@ import  { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import FoodCard1 from './FoodCard1';
 import SideNav1 from './SideNav1';
+import './SideNav1.css';
+
+import FoodCard2 from './FoodCard2';
+
 
 
 const FoodCard = () => {
@@ -39,20 +43,25 @@ function MyVerticallyCenteredModal(props) {
     </Modal>
   );
 }
+// const [visible,setVisible] = useState(true);
+// const handleScrollEnter=()=>{
+//   <SideNav1/>
+// }
+// const handleScrollLeave=()=>{
+//   setVisible(false);
+// }
   return (
-    <div>
-      
-
-   
-    <section className='bg-white pt-3' >
+    <div  >
+    <section className='bg-black pt-3 section-with-sidebar' id='menu' >
+    <SideNav1/> {/* Adding the sidebar inside this section */}
     <Container>
      <div className='text-center'>
             <h2 className='text-danger my-3 py-5 display-4'>Choose wisely! <i class="bi bi-balloon-heart"></i></h2>
             </div>
             <br/>
             <div className='text-center  mb-5'>
-        <h3 className='display-5 text-black'>Starters!</h3>
-        <hr/>
+        <h3 className='display-5 text-white'>Starters!</h3>
+        <hr className='text-light'/>
     </div>
     
             <Row >
@@ -185,6 +194,8 @@ function MyVerticallyCenteredModal(props) {
      
       
       <FoodCard1/>
+      
+      <FoodCard2/>
     <br/>
   </section>
   

@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button, Col, Container, FloatingLabel, Form, InputGroup, Row } from 'react-bootstrap'
+import { Button, Col, Container, FloatingLabel, Form, InputGroup, Row } from 'react-bootstrap';
+import './prohibit.css';
 
 const Contact = () => {
   return (
-    <section id='Contact' className='bg-white py-3 pb-5'>
+    <section id='Contact' className='bg-white py-3 pb-5 pt-5 mt-5 pb-5 mb-5'>
 <div className='text-center my-2 py-3'>
         <h4 className='display-6 text-danger'>Contact us  <i class="bi bi-chat-dots-fill"></i></h4>
        </div>

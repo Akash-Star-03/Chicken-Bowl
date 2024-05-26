@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+
 .App {
   text-align: center;
 }
@@ -41,41 +43,33 @@
   font-weight: 400;
   font-style: normal;
 }
-Navbar>Nav.Link{
+Navbar > Nav.Link {
   justify-content: center;
   justify-items: center;
   text-align: center;
 }
-.comment-textarea{
-  width: 100%;
-  max-width: 600px;
-  height: 150px;
-  padding: 15px;
-  border: 3px solid rgb(235, 93, 93);
-  box-shadow: 0 4px 8px rgba(0,0, 0,0.1);
-  border-radius: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  resize: none;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-
+.news-cycle-regular {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 100;
+  font-size: 33px;
+  font-style: italic;
 }
-.comment-textarea:hover:focus
-{
-  border-color:#ffffff;
+.comment-textarea:hover:focus {
+  border-color: #ffffff;
   box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.6);
 }
-#Appbar{
+#Appbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 10px 0;
-  z-index: 1000;
-  text-align:center;
-}
-.navv{
+  z-index: 2000;
   text-align: center;
-  
+}
+#Appbar .side-nav{
+  display: none !important;
+}
+.navv {
+  text-align: center;
 }

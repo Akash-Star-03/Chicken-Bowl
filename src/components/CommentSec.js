@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Textarea } from 'react-bootstrap-icons';
+
 
 
 
@@ -9,13 +9,13 @@ const CommentSec = ({comments}) => {
     useEffect(()=>{
         const interval =setInterval(()=>{
             setIndex((prevIndex)=>(prevIndex+1) % comments.length);
-        },4000);
+        },5000);
         return ()=> clearInterval(interval);
     },[comments.length])
   return (
     <div >
         {comments.length > 0 && (
-            <textarea className='comment-textarea' readOnly value={comments[index]}/>
+            <h3 className='  text-white news-cycle-regular '> {comments[index]} </h3> 
         )
         }
     </div>

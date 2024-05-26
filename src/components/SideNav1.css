@@ -1,36 +1,58 @@
-.side-nav{
-    position: fixed;
+.section-with-sidebar {
+    position: relative; /* Ensure the sidebar is positioned relative to this section */
+}
+
+.side-nav-container {
+    position: sticky;
     top: 50%;
-    left: -100px;
+    left: 0;
     transform: translateY(-50%);
     width: 60px;
-    background: #333;
-    color: white;
-
-    padding-left: 3px;
-    transition: right 0.3s ease-in-out;
     z-index: 1000;
-    border-radius:50px;
+}
+
+.side-nav {
+    position: absolute;
+    left: -47px; /* Initially hide it outside of the viewport */
+    width: 60px;
+    background: #333;
+    color: black;
+    padding-left: 3px;
+    transition: left 0.3s ease-in-out; /* Transition for smooth visibility change */
+    border-radius: 50px;
     text-align: center;
     padding-top: 3px;
     padding-left: 3px;
-    background-color: black;
+    background-color: white;
 }
-.side-nav .visible{
-    left: 40px;
+
+.side-nav-container:hover .side-nav {
+    left: 10px; /* Fully visible when hovered */
 }
-.side-nav .nav-icon{
-    font: size 24px;
+
+.side-nav-container:hover:before {
+    content: '';
+    position: absolute;
+    left: -60px; /* Extends the hoverable area */
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: transparent;
+}
+
+.side-nav .nav-icon {
+    font-size: 24px;
     margin: 10px 0;
     color: white;
     text-align: center;
     position: relative;
 }
-.side-nav .nav-icon:hover::after{
+
+.side-nav .nav-icon:hover::after {
     cursor: pointer;
     content: attr(title);
     position: absolute;
-    left: -150px;
+    left: 30px; /* Adjust position to be inside the viewport */
     top: 50%;
     transform: translateY(-50%);
     background: #333;

@@ -34,12 +34,12 @@ function MyVerticallyCenteredModal(props) {
   );
 }
   return (
-    <section className='bg-light mt-2' id="Foods-Main">
+    <section className='bg-black mt-5 pt-4 pb-5' id="Foods-Main">
     <Container>
     <div className='text-center mt-5 mb-4'>
-        <h3 className='display-5 text-black'>Main Course</h3>
+        <h3 className='display-5 text-white'>Main Course</h3>
     </div>
-    <hr/>
+    <hr className='text-white'/>
             <Row >
             <Col md={6} lg={4} >
         
@@ -86,7 +86,7 @@ function MyVerticallyCenteredModal(props) {
       <Card.Title className='text-danger fw-bold'>Parota with Egg Masala</Card.Title>
       <Card.Text>
         <h4 className='text-black'>₹ 275</h4>
-        Egg masala gravy from chettinadu style. It have all spices and traditional way of cooking recipe, Made by chettinadu chefs. One pcs of parotha will be complimentry.
+        Egg masala gravy from chettinadu style. It have spices and traditional recipe, Made by chettinadu chefs. 1 pcs of parota will be complimentry.
       </Card.Text>
       <Button variant="dark" onClick={() => setModalShow(true)}>Order Now</Button>
     </Card.Body>
@@ -121,7 +121,7 @@ function MyVerticallyCenteredModal(props) {
       <Card.Title className='text-danger fw-bold'>Bamboo chicken</Card.Title>
       <Card.Text>
         <h4 className='text-black'> ₹ 560</h4>
-      Bamboo chicken biriyani is modern new style of biriyani , cooked by inside the bamboo. It have all flavour of bamboo and chicken in it.
+      Bamboo chicken biriyani is modern new style of biriyani , cooked by inside the japanese bamboo. It have all flavour of bamboo and chicken with indian spices in it.
       </Card.Text>
       <Button variant="dark" onClick={() => setModalShow(true)}>Order Now</Button>
     </Card.Body>
