@@ -49,9 +49,9 @@ Navbar > Nav.Link {
   text-align: center;
 }
 .news-cycle-regular {
-  font-family: "News Cycle", sans-serif;
+  font-family: "News Cycle", sans-serif;  /* Font style for comment section*/
   font-weight: 100;
-  font-size: 33px;
+  font-size: 30px;
   font-style: italic;
 }
 .comment-textarea:hover:focus {
@@ -68,8 +68,12 @@ Navbar > Nav.Link {
   text-align: center;
 }
 #Appbar .side-nav{
-  display: none !important;
+  display: none !important; /*this is for ensure sidenav dont appear on the other page*/
 }
 .navv {
   text-align: center;
+}
+/* Below is for block the default bug in bootstrap */
+body{
+  overflow-x: hidden;
 }

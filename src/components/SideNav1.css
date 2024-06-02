@@ -9,10 +9,11 @@
     transform: translateY(-50%);
     width: 60px;
     z-index: 1000;
+    
 }
 
 .side-nav {
-    position: absolute;
+    position: fixed;
     left: -47px; /* Initially hide it outside of the viewport */
     width: 60px;
     background: #333;
@@ -50,14 +51,12 @@
 
 .side-nav .nav-icon:hover::after {
     cursor: pointer;
-    content: attr(title);
-    position: absolute;
-    left: 30px; /* Adjust position to be inside the viewport */
-    top: 50%;
-    transform: translateY(-50%);
-    background: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
+   
+   
+   
+}
+/* It is for block the default bug in bootstrap */
+#tooltip-main-course{ 
+    overflow-x: hidden;   
+    background-color: white;
 }

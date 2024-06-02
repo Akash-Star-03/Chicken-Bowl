@@ -10,6 +10,7 @@ const FoodCard1 = () => {
 
 function MyVerticallyCenteredModal(props) {
   return (
+    //Below is the modal for the menu card
     <Modal
       {...props}
       size="lg"

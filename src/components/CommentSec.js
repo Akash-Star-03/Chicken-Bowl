@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
-
-
-
+import React, { useEffect, useState } from 'react';
 
 const CommentSec = ({comments}) => {
     const [index,setIndex]=useState(0)
 
+    //Using useState  and Interval to create the comment auto slide
     useEffect(()=>{
         const interval =setInterval(()=>{
             setIndex((prevIndex)=>(prevIndex+1) % comments.length);

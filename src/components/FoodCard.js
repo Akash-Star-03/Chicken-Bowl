@@ -13,13 +13,14 @@ import FoodCard2 from './FoodCard2';
 
 
 const FoodCard = () => {
-  //It is for the side nav 
+  
   
   //below useState is for modal
     const [modalShow, setModalShow] = useState(false); 
 
 function MyVerticallyCenteredModal(props) {
   return (
+    // this is the modal for the buy button
     <Modal
       {...props}
       size="lg"
@@ -63,7 +64,7 @@ function MyVerticallyCenteredModal(props) {
         <h3 className='display-5 text-white'>Starters!</h3>
         <hr className='text-light'/>
     </div>
-    
+    {/* Below are the Cards for the menu section */}
             <Row >
             <Col md={6} lg={4} >
         
@@ -192,9 +193,9 @@ function MyVerticallyCenteredModal(props) {
    
       </Container>
      
-      
+     {/* It is the Main course menu section       */}
       <FoodCard1/>
-      
+      {/* It is the Desserts menu section */}
       <FoodCard2/>
     <br/>
   </section>

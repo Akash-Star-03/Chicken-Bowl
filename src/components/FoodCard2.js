@@ -35,12 +35,12 @@ const FoodCard2 = () => {
       );
     }
   return (
-   <section id='desert' className='bg-black pt-5 mt-3  '>
+   <section id='desert' className='bg-black pt-5 mt-3 section-with-sidebar  '>
+   <Container>
       <div className='text-center  mb-5'>
         <h3 className='display-5 text-white'>Desserts!</h3>
         <hr className='text-light'/>
         </div>
-   <Container>
    <Row >
             <Col md={6} lg={4} >
         

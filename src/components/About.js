@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import AboutImg from '../Assets/About.png';
-import './prohibit.css';
+
 
 const About = () => {
   return (
@@ -16,6 +16,7 @@ const About = () => {
         <div className='md:w-50 px-5 py-5'>
         <img src={AboutImg}   alt='About' className='img-fluid  ' style={{maxWidth:'400px'}}/>
         </div>
+        {/*  The headings are over , below are content of this page */}
         <div>
           <p className='text-dark lead'>Welcome to <b>Chicken Bowl</b>, your go-to destination for mouthwatering chicken-based dishes! Established in 2020, Chicken Bowl has swiftly become a household name, delivering over 5000 delectable meals per day. Our commitment to quality and culinary excellence sets us apart, offering Indian flavors and tantalizing continental delights.</p>
 

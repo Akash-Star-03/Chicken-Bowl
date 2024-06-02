@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, FloatingLabel, Form, InputGroup, Row } from 'react-bootstrap';
-import './prohibit.css';
+
 
 const Contact = () => {
   return (
