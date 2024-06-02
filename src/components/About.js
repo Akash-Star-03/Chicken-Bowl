@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import AboutImg from '../Assets/About.png';
+import './SideNav1.css';
 
 
 const About = () => {
@@ -14,7 +15,7 @@ const About = () => {
           <h2 className='text-danger display-5 mb-4'>About Us</h2>
         </div>
         <div className='md:w-50 px-5 py-5'>
-        <img src={AboutImg}   alt='About' className='img-fluid  ' style={{maxWidth:'400px'}}/>
+        <img src={AboutImg}   alt='About' className='about' style={{maxWidth:'400px'}}/>
         </div>
         {/*  The headings are over , below are content of this page */}
         <div>
