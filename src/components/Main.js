@@ -1,8 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { Col, Container, Row } from 'react-bootstrap';
-import RightIcon from '../Utilities/RightIcon';
-import LeftIcon from '../Utilities/LeftIcon';
+
 
 
 
